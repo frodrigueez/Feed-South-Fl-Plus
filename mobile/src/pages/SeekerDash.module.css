@@ -3,19 +3,19 @@
   height: 100vh;
   display: grid;
   grid-auto-columns: 100%;
-  grid-template-rows: 350px 50px 40px 190px 20px;
+  grid-template-rows: 360px 50px 40px 190px 20px;
   padding: 0em 0px;
 }
 
 .welcome {
   color: #ea861e;
   letter-spacing: 0.25em;
-  font-size: 3em;
+  font-size: 2.6em;
 }
 
 .welcomeMessage {
   letter-spacing: 0.01em;
-  font-size: 2em;
+  font-size: 1.85em;
   color: #436026;
 }
 
@@ -23,7 +23,7 @@
   background: linear-gradient(90deg, #d97208 0%, #d97208 50%, #ff8200 100%);
   border: none;
   border-radius: 5pt;
-  font-size: 1.25em;
+  font-size: 1em;
   color: white;
 }
 
@@ -36,6 +36,6 @@
   );
   border: none;
   border-radius: 5pt;
-  font-size: 1.25em;
+  font-size: 1em;
   color: white;
 }
