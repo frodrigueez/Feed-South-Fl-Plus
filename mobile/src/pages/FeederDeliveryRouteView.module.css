@@ -1,0 +1,24 @@
+.main{
+    display: relative;
+}
+.maplayer{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.menuTop{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.menuBottom{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+}

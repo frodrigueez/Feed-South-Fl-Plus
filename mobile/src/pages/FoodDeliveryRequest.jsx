@@ -57,22 +57,6 @@ const FoodDeliveryRequest = () => {
           ></textarea>
         </div>
       </div>
-      <div className={`${style.menu} shadow mx-auto px-4`}>
-        {" "}
-        <div className="container-fluid pt-3 pb-1">
-          <div className="row">
-            <div className="col-3 ml-auto text-center">
-              <img src={profile} alt="" />
-            </div>
-            <div className="col-3 text-center">
-              <img src={location} alt="" />
-            </div>
-            <div className="col-3 pt-2 mr-auto text-center">
-              <img src={delivery} alt="" />
-            </div>
-          </div>
-        </div>{" "}
-      </div>
       <div className={`${style.secondary} pt-4`}>
         <div>
           In an effort to keep our members and volunteers Safe, we’re asking all
@@ -116,6 +100,22 @@ const FoodDeliveryRequest = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={`${style.menu} shadow mx-auto px-4`}>
+        {" "}
+        <div className="container-fluid pt-3 pb-1">
+          <div className="row">
+            <div className="col-3 ml-auto text-center">
+              <img src={profile} alt="" />
+            </div>
+            <div className="col-3 text-center">
+              <img src={location} alt="" />
+            </div>
+            <div className="col-3 pt-2 mr-auto text-center">
+              <img src={delivery} alt="" />
+            </div>
+          </div>
+        </div>{" "}
       </div>
     </>
   );

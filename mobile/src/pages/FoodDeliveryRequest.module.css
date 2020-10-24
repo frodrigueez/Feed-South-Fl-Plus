@@ -47,4 +47,7 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     box-shadow: 2px -8px 15px -1px rgba(0,0,0,0.07);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
