@@ -1,0 +1,50 @@
+.main {
+  background-color: #e8e7e5;
+  height: 100vh;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 350px 50px 50px 60px 70px 40px 80px 14px;
+  padding: 0em 45px;
+}
+.item {
+  /* border: 1px solid black; */
+}
+
+.iconSize {
+  font-size: 1.75em;
+}
+
+.input {
+  border-radius: 5pt;
+}
+
+.button {
+  background: linear-gradient(90deg, #d97208 0%, #d97208 50%, #ff8200 100%);
+  border: none;
+  border-radius: 5pt;
+  font-size: 1.25em;
+}
+
+.linkColor{
+    color: #EA861E;
+}
+.linkColor:link{
+    color: #EA861E;
+}
+
+
+.rememberSection{
+    font-size: .90em;
+}
+
+.rememberCB{
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
