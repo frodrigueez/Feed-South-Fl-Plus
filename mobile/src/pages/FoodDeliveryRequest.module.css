@@ -1,0 +1,50 @@
+.main {
+  background-color: #F7F7F7;
+  height: 100vh;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 250px 50px 75px 40px 60px 60px 70px 40px 50px;
+  padding: 0em 45px;
+  color: #919191;
+}
+
+.secondary {
+    background-color: #F7F7F7;
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-template-rows: 250px 70px 50px 150px;
+    padding: 0em 45px;
+    color: #313131;
+    font-weight: 500;
+  }
+
+.section1{
+    color: #436026;
+    font-weight: 600;
+    font-size: 1.7em;
+    letter-spacing: .01em;
+}
+
+.button{
+    background: linear-gradient(90deg, #d97208 0%, #d97208 50%, #ff8200 100%);
+    border: none;
+    border-radius: 5pt;
+    font-size: 1.25em;
+  
+}
+
+.buttonNo {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5pt;
+  font-size: 1.25em;
+  border: 1px solid #D6D6D6;
+}
+
+.menu{
+    background-color: #ffffff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 2px -8px 15px -1px rgba(0,0,0,0.07);
+}
