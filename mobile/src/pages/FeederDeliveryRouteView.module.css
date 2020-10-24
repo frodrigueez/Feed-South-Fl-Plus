@@ -35,3 +35,10 @@
   font-size: .75em;
   font-weight: 600;
 }
+
+.status{
+    font-size: .8em;
+    background-color: #EA861E;
+    border-radius: 10pt;
+    color: #FFFFFF;
+}
