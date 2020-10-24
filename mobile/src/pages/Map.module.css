@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway/static/Raleway-Regular.ttf');
+}
+.container {
+  background-image: url('../assets/images/map.png');
+  height: 100vh;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 60px 300px;
+}
+.item {
+  /* border: 1px solid black; */
+  text-align: center;
+}
