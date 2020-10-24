@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway/static/Raleway-Regular.ttf');
+}
+.main {
+  background-image: url('../assets/images/Backgroundimage.png');
+  background-position: -30px 0px;
+  height: 100vh;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 500px auto;
+}
+.item {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+.welcomeSection {
+  height: 100%;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 100px 50px 50px;
+}
+.welcomeText {
+  font-family: Raleway;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #EA861E;
+}
+.welcomeSubtext {
+  font-family: Raleway;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #436026;
+}
+.button {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  width: 217px;
+  height: 50px;
+}
+.loginButton {
+  background: linear-gradient(90deg, #D97208 0%, #D97208 50%, #FF8200 100%);
+  color: white;
+}
+.signinButton {
+  background: linear-gradient(268deg, #6BD600 0%, #366705 50%, #2A5D00 100%);
+  color: white;
+}

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway/static/Raleway-Regular.ttf');
+}
 .main {
   background-color: #F7F7F7;
   height: 100vh;
@@ -11,7 +15,7 @@
   text-align: center;
 }
 .button {
-  font-family: "Helvetica Neue";
+  font-family: Raleway;
   font-weight: 400;
   font-size: 20px;
   border-radius: 7px;
@@ -28,7 +32,7 @@
   color: white;
 }
 .quote {
-  font-family: "Helvetica Neue";
+  font-family: Raleway;
   font-size: 11px;
   text-align: center;
   color: #2F2F2F;
