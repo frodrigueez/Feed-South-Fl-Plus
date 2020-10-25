@@ -1,0 +1,22 @@
+.main {
+  background-image: url('../assets/images/Feeder request.png');
+  height: 812px;
+  width: 100vw;
+}
+
+#detailsLink {
+  position: absolute;
+  top: 347px;
+  left: 46px;
+  width: 42px;
+  height: 38px;
+  /* border: 1px solid red; */
+}
+#claimLink {
+  position: absolute;
+  top: 347px;
+  left: 157px;
+  width: 180px;
+  height: 38px;
+  /* border: 1px solid red; */
+}

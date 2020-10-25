@@ -1,0 +1,13 @@
+.main {
+  background-image: url('../assets/images/Feeder dashboard.png');
+  height: 812px;
+  width: 100vw;
+}
+#startBtnLink {
+  position: absolute;
+  top: 600px;
+  left: 83px;
+  width: 217px;
+  height: 50px;
+  /* border: 1px solid red; */
+}

@@ -1,0 +1,90 @@
+.main {
+  background-image: url('../assets/images/Location-feeder requests view.png');
+  height: 812px;
+  width: 100vw;
+}
+.mainAgreed {
+  background-image: url('../assets/images/After claim request accepted.png');
+  height: 812px;
+  width: 100vw;
+}
+.mainPickedUp {
+  background-image: url('../assets/images/Steps of the request.png');
+  height: 812px;
+  width: 100vw;
+}
+
+#claimLink {
+  position: absolute;
+  top: 667px;
+  left: 98px;
+  width: 180px;
+  height: 38px;
+  /* border: 1px solid red; */
+}
+#goLink {
+  position: absolute;
+  top: 529px;
+  left: 278px;
+  width: 40px;
+  height: 38px;
+  /* border: 1px solid red; */
+}
+#goLink2 {
+  position: absolute;
+  top: 612px;
+  left: 278px;
+  width: 40px;
+  height: 38px;
+  /* border: 1px solid red; */
+}
+#confirmLink {
+  position: absolute;
+  top: 514px;
+  left: 94px;
+  height: 40px;
+  width: 188px;
+  /* border: 1px solid red; */
+  z-index: 15;
+}
+#confirmLink2 {
+  position: absolute;
+  top: 520px;
+  left: 94px;
+  height: 40px;
+  width: 188px;
+  /* border: 1px solid red; */
+  z-index: 15;
+}
+#confirmPopup {
+  background-image: url('../assets/images/confirm_pickup.png');
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 268px;
+  left: 20px;
+  height: 324px;
+  width: 335px;
+  box-shadow: 10px 10px 20px #0000001A;
+  z-index: 10;
+}
+#confirmPopup2 {
+  background-image: url('../assets/images/confirm_delivery.png');
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 268px;
+  left: 20px;
+  height: 324px;
+  width: 335px;
+  box-shadow: 10px 10px 20px #0000001A;
+  z-index: 10;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 5;
+}

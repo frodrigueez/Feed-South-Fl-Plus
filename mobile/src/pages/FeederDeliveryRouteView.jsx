@@ -7,6 +7,7 @@ import location from "../assets/images/locationmarkgreen.png";
 import delivery from "../assets/images/deleiveryiconorange.png";
 import phone from "../assets/images/phoneOrange.png";
 import card from "../assets/images/card.png";
+import {Link} from 'react-router-dom';
 const FeederDeliveryRouteView = () => {
   return (
     <>
@@ -59,7 +60,7 @@ const FeederDeliveryRouteView = () => {
         <div className="container-fluid pt-3 pb-1">
           <div className="row">
             <div className="col-3 ml-auto text-center">
-              <img src={profile} alt="" />
+            <Link to="/seeker/profile"><img src={profile} alt="" /></Link>
             </div>
             <div className="col-3 text-center">
               <img src={location} alt="" />
