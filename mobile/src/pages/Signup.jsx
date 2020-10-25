@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Signup.module.css";
+import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className={`${style.main}`}>
@@ -95,11 +96,13 @@ const Signup = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-10 p-0 mx-auto">
-              <button
-                className={`${style.signUpButton} btn btn-block p-3 my-5 my-4`}
-              >
-                Sign Up
-              </button>
+              <Link to="/seeker/dashboard">
+                <button
+                  className={`${style.signUpButton} btn btn-block p-3 my-5 my-4`}
+                >
+                  Sign Up
+                </button>
+              </Link>
             </div>
           </div>
         </div>

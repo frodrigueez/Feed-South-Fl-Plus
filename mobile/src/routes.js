@@ -18,20 +18,20 @@ const Router = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/usertype" component={UserType} />
         <Route exact path="/seeker" component={SeekerMapView} />
         <Route exact path="/seeker/dashboard" component={SeekerDash} />
         <Route
           exact
-          path="/seeker/confirmation"
+          path="/seeker/dist/route"
           component={FoodDeliveryRequest}
         />
         <Route exact path="/seeker/route" component={FeederDeliveryRouteView} />
         <Route
           exact
-          path="/seeker/dist/route"
+          path="/seeker/dist/map"
           component={FeederDistRouteView}
         />
-        <Route exact path="/usertype" component={UserType} />
         <Route exact path="/map" component={Map} />
       </Switch>
     </HashRouter>

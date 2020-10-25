@@ -3,6 +3,8 @@ import style from "./SeekerDash.module.css";
 import seekerSignUp from "../assets/images/seekersignup.png";
 import deliveryicon from "../assets/images/deleiveryiconorange.png";
 import locatioMarker from "../assets/images/locationmarkgreen.png";
+import { Link } from "react-router-dom";
+
 const SeekerDash = () => {
   return (
     <div className={`${style.main}`}>
@@ -15,7 +17,9 @@ const SeekerDash = () => {
           </div>
         </div>
       </div>
-      <div className={`${style.welcome} text-center`}><b>Welcome,</b></div>
+      <div className={`${style.welcome} text-center`}>
+        <b>Welcome,</b>
+      </div>
       <div className={`${style.welcomeMessage} text-center`}>
         We are here to help
       </div>
@@ -23,25 +27,28 @@ const SeekerDash = () => {
         <div className="container">
           <div className="row">
             <div className="col-10 mx-auto">
-              <button className={`${style.distBt} btn btn-block p-2`}>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-1">
-                      {" "}
-                      <img
-                        src={locatioMarker}
-                        alt=""
-                        style={{
-                          filter: "grayscale(100%) invert(100%) brightness(2)",
-                        }}
-                      />{" "}
-                    </div>
-                    <div className="col-auto ml-auto pt-2 text-right pr-4">
-                      Food Distrubution
+              <Link to="/seeker/dist/map">
+                <button className={`${style.distBt} btn btn-block p-2`}>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-1">
+                        {" "}
+                        <img
+                          src={locatioMarker}
+                          alt=""
+                          style={{
+                            filter:
+                              "grayscale(100%) invert(100%) brightness(2)",
+                          }}
+                        />{" "}
+                      </div>
+                      <div className="col-auto ml-auto pt-2 text-right pr-4">
+                        Food Distrubution
+                      </div>
                     </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -50,25 +57,28 @@ const SeekerDash = () => {
         <div className="container">
           <div className="row">
             <div className="col-10 mx-auto">
-              <button className={`${style.deleveryBt} btn btn-block p-3`}>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-1 p-0">
-                      {" "}
-                      <img
-                        src={deliveryicon}
-                        alt=""
-                        style={{
-                          filter: "grayscale(100%) invert(100%) brightness(2)",
-                        }}
-                      />{" "}
-                    </div>
-                    <div className="col-auto ml-auto pt-1 text-right pr-4">
-                      Food Delivery
+              <Link to='/seeker/dist/route'>
+                <button className={`${style.deleveryBt} btn btn-block p-3`}>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-1 p-0">
+                        {" "}
+                        <img
+                          src={deliveryicon}
+                          alt=""
+                          style={{
+                            filter:
+                              "grayscale(100%) invert(100%) brightness(2)",
+                          }}
+                        />{" "}
+                      </div>
+                      <div className="col-auto ml-auto pt-1 text-right pr-4">
+                        Food Delivery
+                      </div>
                     </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
