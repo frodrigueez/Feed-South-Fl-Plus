@@ -19,9 +19,8 @@ const SeekerRequest = () => {
     'file': '/feeder/profile',
   }
   
-  return (<div className={`${style.main} ${style[action]}`}>
-    {/* <Link to="/seeker/healthcheck"><div id={style.claimLink}></div></Link> */}
-    
+  return (
+  <div className={`${style.main} ${style[action]}`}>
     {action === actions.VIEWING_REQUEST ? <div id={style.claimLink} onClick={() => setAction(actions.READING_HEALTHCHECK)}></div> : ''}
     {action === actions.READING_HEALTHCHECK ? <div id={style.agreeBtnLink} onClick={() => setAction(actions.PICKING_UP)}></div> : ''}
     {action === actions.PICKING_UP ? <div id={style.goLink} onClick={() => setShowPickupConfirmation(true)}></div> : ''}
