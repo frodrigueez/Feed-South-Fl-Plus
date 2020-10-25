@@ -15,6 +15,7 @@ const Router = () => {
   return (
     <HashRouter>
       <Switch>
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/seeker" component={SeekerMapView} />
@@ -30,7 +31,6 @@ const Router = () => {
           path="/seeker/dist/route"
           component={FeederDistRouteView}
         />
-        <Route exact path="/" component={Home} />
         <Route exact path="/usertype" component={UserType} />
         <Route exact path="/map" component={Map} />
       </Switch>
