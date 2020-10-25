@@ -7,6 +7,10 @@ import SeekerDash from "./pages/SeekerDash";
 import FoodDeliveryRequest from "./pages/FoodDeliveryRequest";
 import FeederDeliveryRouteView from "./pages/FeederDeliveryRouteView";
 import FeederDistRouteView from "./pages/FeederDistRouteView";
+import UserType from "./pages/UserType";
+import Home from "./pages/Home";
+import Map from "./pages/Map";
+
 const Router = () => {
   return (
     <HashRouter>
@@ -15,9 +19,20 @@ const Router = () => {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/seeker" component={SeekerMapView} />
         <Route exact path="/seeker/dashboard" component={SeekerDash} />
-        <Route exact path="/seeker/confirmation" component={FoodDeliveryRequest} />
+        <Route
+          exact
+          path="/seeker/confirmation"
+          component={FoodDeliveryRequest}
+        />
         <Route exact path="/seeker/route" component={FeederDeliveryRouteView} />
-        <Route exact path="/seeker/dist/route" component={FeederDistRouteView} />
+        <Route
+          exact
+          path="/seeker/dist/route"
+          component={FeederDistRouteView}
+        />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/usertype" component={UserType} />
+        <Route exact path="/map" component={Map} />
       </Switch>
     </HashRouter>
   );

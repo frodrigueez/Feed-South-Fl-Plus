@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway/static/Raleway-Regular.ttf');
+}
+.main {
+  background-color: #F7F7F7;
+  height: 100vh;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 280px 50px 280px 50px auto;
+  padding: 0em 45px;
+}
+.item {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+.button {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  width: 218px;
+  height: 50px;
+}
+.seekerButton {
+  background: linear-gradient(90deg, #D97208 0%, #D97208 50%, #FF8200 100%);
+  color: white;
+}
+.feederButton {
+  background: linear-gradient(268deg, #6BD600 0%, #366705 50%, #2A5D00 100%);
+  color: white;
+}
+.quote {
+  font-family: Raleway;
+  font-size: 11px;
+  text-align: center;
+  color: #2F2F2F;
+  position: absolute;
+  bottom: 30px;
+}
