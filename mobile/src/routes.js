@@ -14,7 +14,7 @@ import Map from "./pages/Map";
 import DistributionCentersList from './pages/DistributionCentersList';
 import SeekerProfile from './pages/SeekerProfile';
 import SeekerRequest from './pages/SeekerRequest';
-import FeederProfile from './pages/FeederProfile';
+// import FeederProfile from './pages/FeederProfile';
 import FeederDash from './pages/FeederDash';
 import SeekerRequests from './pages/SeekerRequests';
 
@@ -44,11 +44,6 @@ const Router = () => {
           exact
           path="/seeker/profile"
           component={SeekerProfile}
-        />
-        <Route
-          exact
-          path="/feeder/profile"
-          component={FeederProfile}
         />
         <Route
           exact

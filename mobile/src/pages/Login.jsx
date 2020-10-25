@@ -15,11 +15,13 @@ const Login = () => {
         <input
           type="text"
           placeholder="Your email"
+          value='email@email.com'
           className={`${style.input} form-control`}
         />
       </div>
       <div className={`${style.item}`}>
         <input
+        value='888888888'
           type="password"
           placeholder="********"
           className={`${style.input} form-control`}
@@ -36,7 +38,7 @@ const Login = () => {
             </div>
             <div className="col-5 p-0 pl-2">Remember me</div>
             <div className={` col-5 p-0 text-right`}>
-              <a href="#" className={`${style.linkColor}`}>Forget password?</a>
+              <a href="/" className={`${style.linkColor}`}>Forget password?</a>
             </div>
           </div>
         </div>
@@ -65,7 +67,7 @@ const Login = () => {
       </div>
       <div className={`${style.item} text-center`}>
         New user?{" "}
-        <a href="#" className={`${style.linkColor}`}>
+        <a href="/" className={`${style.linkColor}`}>
           Sign Up
         </a>{" "}
       </div>
