@@ -13,12 +13,9 @@ import Map from "./pages/Map";
 import DistributionCentersList from './pages/DistributionCentersList';
 import SeekerProfile from './pages/SeekerProfile';
 import SeekerRequest from './pages/SeekerRequest';
-import SeekerRequest_agreed from './pages/SeekerRequest_agreed';
-import SeekerRequest_pickedUp from './pages/SeekerRequest_pickedUp';
 import FeederProfile from './pages/FeederProfile';
 import FeederDash from './pages/FeederDash';
 import SeekerRequests from './pages/SeekerRequests';
-import SeekerHealthCheck from './pages/SeekerHealthCheck';
 
 const Router = () => {
   return (
@@ -48,11 +45,6 @@ const Router = () => {
         />
         <Route
           exact
-          path="/seeker/healthcheck"
-          component={SeekerHealthCheck}
-        />
-        <Route
-          exact
           path="/feeder/profile"
           component={FeederProfile}
         />
@@ -67,20 +59,9 @@ const Router = () => {
           component={SeekerRequests}
         />
         <Route
-          exact
-          path="/feeder/request/:id/agreed"
-          component={SeekerRequest_agreed}
-        />
-        <Route
-          exact
-          path="/feeder/request/:id/pickedUp"
-          component={SeekerRequest_pickedUp}
-        />
-        <Route
           path="/feeder/request/:id"
           component={SeekerRequest}
         />
-        <Route exact path="/usertype" component={UserType} />
         <Route exact path="/map" component={Map} />
         <Route exact path="/list" component={DistributionCentersList} />
       </Switch>

@@ -1,17 +1,18 @@
 .main {
+  height: 812px;
+  width: 100vw;
+}
+.VIEWING_REQUEST {
   background-image: url('../assets/images/Location-feeder requests view.png');
-  height: 812px;
-  width: 100vw;
 }
-.mainAgreed {
+.READING_HEALTHCHECK {
+  background-image: url('../assets/images/Health Check.png');
+}
+.PICKING_UP {
   background-image: url('../assets/images/After claim request accepted.png');
-  height: 812px;
-  width: 100vw;
 }
-.mainPickedUp {
+.DROPPING_OFF {
   background-image: url('../assets/images/Steps of the request.png');
-  height: 812px;
-  width: 100vw;
 }
 
 #claimLink {
@@ -20,7 +21,24 @@
   left: 98px;
   width: 180px;
   height: 38px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
+}
+#agreeBtnLink {
+  position: absolute;
+  top: 361px;
+  left: 45px;
+  width: 130px;
+  height: 45px;
+  border: 1px solid red;
+}
+#agreeBtnLink:hover {
+  position: absolute;
+  top: 361px;
+  left: 45px;
+  width: 130px;
+  height: 45px;
+  border: 2px solid orange;
+  border-radius: 7px
 }
 #goLink {
   position: absolute;

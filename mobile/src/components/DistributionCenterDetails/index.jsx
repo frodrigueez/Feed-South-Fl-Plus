@@ -26,7 +26,7 @@ const DistributionCenterDetails = (props) => {
           </tr>
         </tbody>
       </table>
-      <button className={style.takeMeHereButton}>Take Me There</button>
+      <button className={style.takeMeHereButton} onClick={props.takeMeThere}>Take Me There</button>
     </div>
   );  
 }

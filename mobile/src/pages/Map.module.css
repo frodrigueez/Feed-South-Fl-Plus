@@ -9,7 +9,18 @@
   grid-auto-columns: 100%;
   grid-template-rows: 60px 300px;
 }
+.hasDestination {
+  background-image: url('../assets/images/map.png');
+}
 .item {
   /* border: 1px solid black; */
   text-align: center;
+}
+.distCenterTrigger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 270px;
+  left: 240px;
+  /* border: 1px solid red; */
 }

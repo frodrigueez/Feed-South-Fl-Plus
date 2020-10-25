@@ -21,7 +21,7 @@ const SeekerDash = () => {
         <b>Welcome,</b>
       </div>
       <div className={`${style.welcomeMessage} text-center`}>
-        We are here to help
+        We are here to help.
       </div>
       <div className="pt-5 mt-5">
         <div className="container">
@@ -43,7 +43,7 @@ const SeekerDash = () => {
                         />{" "}
                       </div>
                       <div className="col-auto ml-auto pt-2 text-right pr-4">
-                        Food Distrubution
+                        Food Distribution
                       </div>
                     </div>
                   </div>

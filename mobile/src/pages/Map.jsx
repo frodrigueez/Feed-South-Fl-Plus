@@ -12,8 +12,9 @@ const Map = () => {
     phone: '561-317-0000',
     email: 'angelharvest@gmail.com'
   };
-  const [distCenter, setDistCenter] = useState(sampleDistCenter);
-
+  const [distCenter, setDistCenter] = useState(null);
+  const [destination, setDestination] = useState(false);
+  
   const toggleDistCenter = () => {
     if(distCenter){
       setDistCenter(null);
@@ -21,15 +22,20 @@ const Map = () => {
       setDistCenter(sampleDistCenter);
     }
   }
+  const links = {
+    'file': '/seeker/profile',
+    'delivery': '/seeker/dist/route',
+  }
 
   return (
-    <div className={style.container} onClick={toggleDistCenter}>
+    <div className={`${style.container} ${destination ? style.hasDestination : ''}}`} >
+      <div onClick={toggleDistCenter} className={style.distCenterTrigger}></div>
       <div className={`${style.item} pt-3`}>
         <ZipCodeSearchBar />
       </div>
-      { distCenter ? <DistributionCenterDetails distCenter={distCenter} /> : ''}
+      { distCenter ? <DistributionCenterDetails distCenter={distCenter} takeMeThere={() => {setDestination(true); setDistCenter(null);}} /> : ''}
 
-      <Toolbar/>
+      <Toolbar links={links} />
     </div>
   );
 
