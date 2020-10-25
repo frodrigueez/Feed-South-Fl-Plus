@@ -31,7 +31,7 @@ const Home = () => {
               type="button"
               className={`btn ${style.button} ${style.signinButton}`}
             >
-              Sign In
+              Sign Up
             </button>
           </Link>
         </div>

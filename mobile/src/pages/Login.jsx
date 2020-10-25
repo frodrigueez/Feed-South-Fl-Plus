@@ -3,6 +3,7 @@ import style from "./Login.module.css";
 import welcomeImg from "../assets/images/welcomeback.png";
 import gPlus from "../assets/images/googleIcon.png";
 import facebook from "../assets/images/FacebookIcon.png";
+import {Link} from 'react-router-dom';
 const Login = () => {
   return (
     <div className={`${style.main}`}>
@@ -41,11 +42,13 @@ const Login = () => {
         </div>
       </div>
       <div className={`${style.item}`}>
-        <button
-          className={`${style.button} btn-block text-capitalize p-2 text-white`}
-        >
-          Log in{" "}
-        </button>
+        <Link to='/seeker/dashboard'>
+          <button
+            className={`${style.button} btn-block text-capitalize p-2 text-white`}
+          >
+            Log in{" "}
+          </button>
+        </Link>
       </div>
       <div className={`${style.item} text-center`}>Or sign it with</div>
       <div className={`${style.item}`}>

@@ -3,6 +3,7 @@ import ZipCodeSearchBar from '../components/ZipCodeSearchBar/index';
 import DistributionCenterDetails from '../components/DistributionCenterDetails/index';
 import Toolbar from '../components/Toolbar/index';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const Map = () => {
   const sampleDistCenter = {
@@ -28,13 +29,13 @@ const Map = () => {
   }
 
   return (
-    <div className={`${style.container} ${destination ? style.hasDestination : ''}}`} >
+    <div className={`${style.container} ${destination ? style.hasDestination : ''}`} >
       <div onClick={toggleDistCenter} className={style.distCenterTrigger}></div>
       <div className={`${style.item} pt-3`}>
         <ZipCodeSearchBar />
       </div>
       { distCenter ? <DistributionCenterDetails distCenter={distCenter} takeMeThere={() => {setDestination(true); setDistCenter(null);}} /> : ''}
-
+      <Link to='/seeker/dist/list'><div className={style.listViewIcon}></div></Link>
       <Toolbar links={links} />
     </div>
   );

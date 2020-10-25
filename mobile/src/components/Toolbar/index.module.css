@@ -7,4 +7,5 @@
   width: 100vw;
   bottom: 0px;
   padding-top: 15px;
+  z-index: 2;
 }

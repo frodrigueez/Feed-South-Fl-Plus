@@ -4,6 +4,7 @@ import scooter from "../assets/images/feedersignup.png";
 import profile from "../assets/images/fileicon.png";
 import location from "../assets/images/locationmarkgreen.png";
 import delivery from "../assets/images/deleiveryiconorange.png";
+import {Link} from 'react-router-dom';
 const FoodDeliveryRequest = () => {
   return (
     <>
@@ -95,7 +96,9 @@ const FoodDeliveryRequest = () => {
           <div className="container-fluid">
             <div className="row">
               <div className={`col-10 mx-auto`}>
-                <button className={`${style.button} btn btn-block p-3 text-white`}>Request</button>
+                <Link to="/seeker/route">
+                  <button className={`${style.button} btn btn-block p-3 text-white`}>Request</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -106,7 +109,7 @@ const FoodDeliveryRequest = () => {
         <div className="container-fluid pt-3 pb-1">
           <div className="row">
             <div className="col-3 ml-auto text-center">
-              <img src={profile} alt="" />
+              <Link to="/seeker/profile"><img src={profile} alt="" /></Link>
             </div>
             <div className="col-3 text-center">
               <img src={location} alt="" />

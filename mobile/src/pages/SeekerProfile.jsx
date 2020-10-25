@@ -3,7 +3,7 @@ import style from "./SeekerProfile.module.css";
 import Toolbar from "../components/Toolbar/index";
 const SeekerProfile = () => {
   const links = {
-    'location': '/map',
+    'location': '/seeker/dist/map',
     'delivery': '/seeker/confirmation'
   }
   return <div className={style.main}>

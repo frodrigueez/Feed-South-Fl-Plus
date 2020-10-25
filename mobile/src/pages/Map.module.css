@@ -10,7 +10,7 @@
   grid-template-rows: 60px 300px;
 }
 .hasDestination {
-  background-image: url('../assets/images/map.png');
+  background-image: url('../assets/images/TakeMeThere.png');
 }
 .item {
   /* border: 1px solid black; */
@@ -22,5 +22,14 @@
   width: 40px;
   top: 270px;
   left: 240px;
-  /* border: 1px solid red; */
+}
+.listViewIcon {
+  height: 47px;
+  width: 47px;
+  background-image: url('../assets/images/listviewIcon.png');
+  background-size: 100% 100%;
+  border-radius: 7px 7px;
+  position: fixed;
+  top: 679px;
+  left: 32px;
 }

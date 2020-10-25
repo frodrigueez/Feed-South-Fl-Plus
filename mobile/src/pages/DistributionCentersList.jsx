@@ -1,5 +1,6 @@
 import style from './DistributionCentersList.module.css';
 import Toolbar from '../components/Toolbar/index';
+import { Link } from "react-router-dom";
 
 const DistributionCentersList = () => {
   const sampleDistCenters = [{
@@ -31,28 +32,28 @@ const DistributionCentersList = () => {
       email: 'angelharvest@gmail.com'
     },
     {
-      name: '12th Street COG Prophecy3',
+      name: '12th Street COG Prophecy5',
       distance: '0.8mi',
       address: '601 SE 12th Street, Belle Glade, FL 334330',
       phone: '561-317-0000',
       email: 'angelharvest@gmail.com'
     },
     {
-      name: '12th Street COG Prophecy4',
+      name: '12th Street COG Prophecy6',
       distance: '0.8mi',
       address: '601 SE 12th Street, Belle Glade, FL 334330',
       phone: '561-317-0000',
       email: 'angelharvest@gmail.com'
     },
     {
-      name: '12th Street COG Prophecy3',
+      name: '12th Street COG Prophecy7',
       distance: '0.8mi',
       address: '601 SE 12th Street, Belle Glade, FL 334330',
       phone: '561-317-0000',
       email: 'angelharvest@gmail.com'
     },
     {
-      name: '12th Street COG Prophecy4',
+      name: '12th Street COG Prophecy8',
       distance: '0.8mi',
       address: '601 SE 12th Street, Belle Glade, FL 334330',
       phone: '561-317-0000',
@@ -85,6 +86,9 @@ const DistributionCentersList = () => {
         </div>
     </div>);
   });
+  const links = {
+    'file': '/seeker/profile',
+  }
 
   return (
     <div className={style.main}>
@@ -95,10 +99,10 @@ const DistributionCentersList = () => {
         {DistCenterList}
       </div>
       <div className={style.floatingNav}>
-        <div className={style.mapIcon}></div>
+        <Link to='/seeker/dist/map'><div className={style.mapIcon}></div></Link>
         <div className={style.printIcon}></div>
       </div>
-      <Toolbar />
+      <Toolbar links={links} />
     </div>
   );
 

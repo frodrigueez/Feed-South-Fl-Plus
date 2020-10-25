@@ -6,7 +6,7 @@ import SeekerMapView from "./pages/SeekerMapPage";
 import SeekerDash from "./pages/SeekerDash";
 import FoodDeliveryRequest from "./pages/FoodDeliveryRequest";
 import FeederDeliveryRouteView from "./pages/FeederDeliveryRouteView";
-import FeederDistRouteView from "./pages/FeederDistRouteView";
+// import FeederDistRouteView from "./pages/FeederDistRouteView";
 import UserType from "./pages/UserType";
 import Home from "./pages/Home";
 import Map from "./pages/Map";
@@ -36,7 +36,7 @@ const Router = () => {
         <Route
           exact
           path="/seeker/dist/map"
-          component={FeederDistRouteView}
+          component={Map}
         />
         <Route
           exact
@@ -62,8 +62,8 @@ const Router = () => {
           path="/feeder/request/:id"
           component={SeekerRequest}
         />
-        <Route exact path="/map" component={Map} />
-        <Route exact path="/list" component={DistributionCentersList} />
+        {/* <Route exact path="/map" component={Map} /> */}
+        <Route exact path="/seeker/dist/list" component={DistributionCentersList} />
       </Switch>
     </HashRouter>
   );

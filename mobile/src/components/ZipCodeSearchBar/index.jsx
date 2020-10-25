@@ -7,7 +7,7 @@ const ZipCodeSearchBar = () => {
       <div>
         <img src={searchIcon} alt=""/>
       </div>
-      <input type="text" className={`form-control ${style.invisibleInput}`} placeholder="Zip Code" />
+      <input type="text" className={`form-control ${style.invisibleInput}`} placeholder="address, zip or county" />
     </div>
   );  
 }
