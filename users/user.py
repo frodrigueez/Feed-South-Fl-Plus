@@ -20,7 +20,7 @@ class User:
             'profile_photo': profile_photo
          } 
         self.user_id = datebase.insert_user_info(self.user_info)
-        self.user_filter = {'email': email} # TODO: someone check this
+        self.user_filter = {'email': email} 
         self.user_full_name = name
         self.user_email = email
         self.location_type = 'address'

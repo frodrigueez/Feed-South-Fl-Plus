@@ -1,24 +1,23 @@
 import json
 
+from user import User
 from Common import datebase as datebase
 from Common import calculations as calculations
 
 
-class Feeder(user):
+class Feeder(User):
     def __init__(self, delivery_method):
         super.__init__()
         self.user_info.update(delivery_method=delivery_method) 
         # self.location
-        # #self.Transaction = None # How to assign transaction?
 
-     
     #def _update_feeders_transaction(self, transaction_id):
     #    filter = {'transaction_id': transaction_id}
     #    self.Transaction = datebase.find_one_transaction(filter=filter)
 
-    def _get_requests(self, radius=10):
+    def get_requests(self, radius=10):
         """
-          Return all requests in the area w/in radius
+        Return all requests in the area w/in radius
         """
         valid_locations = []
 
@@ -70,8 +69,14 @@ class Feeder(user):
         return valid_locations
 
 
-    def get_directions(self,):
-      """
-      Display the route to the closest distribution center
-      """
+    def get_directions(self, transaction):
+      uri_base = 'https://www.google.com/maps/dir/?api=1&destination'
+      delivery_address = transaction.get('delivery_address').replace(' ', '%20')
+      closest_distributor = transaction.get('closest_distributor')
+      pickup_address = "{},%20{},%20FL".format(
+            closest_distributor.get('address').replace(' ', '%20'), 
+            closest_distributor.get('city').replace(' ', '%20')
+      )
+       
+      return "{}={}&waypoint={}".format(uri_base, pickup_address, delivery_address)
   

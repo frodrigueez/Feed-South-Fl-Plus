@@ -15,21 +15,22 @@ class Transaction:
             'estimated_time': estimated_time
         }
         # Insert record to transactions collection
-		self.transaction_id = datebase.insert_transaction_record(self.transaction_info)
-        self.filter = {'': transaction_id}
+        self.transaction_id = datebase.insert_transaction_record(self.transaction_info)
+        self.transaction_info.update('transaction_id'=self.transaction_id)
+        self.transaction_filter = {'transaction_id': self.transaction_id} 
         self.transaction_seeker = seeker
         self.transaction_feeder = feeder 
 
     def _update_estimated_time(self, estimated_time):
         # Update db record 
         update = {'estimated_time': estimated_time}
-        datebase.update_transaction_record(filter=self.filter, update=update)
+        datebase.update_transaction_record(filter=self.transaction_filter, update=update)
 
         # Update object
         self.transaction_info.update(estimated_time=estimated_time)
 
     def _get_delivery_instructions(self):
-    	  # TODO
+          raise NotImplementedError()
 
     def  _update_time_delivered(self, time_delivered):
         """
@@ -37,14 +38,14 @@ class Transaction:
         """
         # Update db record's time_delivered field
         update = {'time_delivered': time_delivered}
-        datebase.update_transaction_record(filter=self.filter, update=update)
+        datebase.update_transaction_record(filter=self.transaction_filter, update=update)
         
         # Update db record's estimated_time field
-        datebase.update_transaction_record(filter=self.filter, {estimated_time:'0'})
+        datebase.update_transaction_record(filter=self.transaction_filter, {estimated_time:'0'})
         
         # Update db record's transaction status to delivered
         self._update_transaction_status(transaction_status='delivered')
-   		  self.transaction_info.update(delivery_status='delivered')
+   		self.transaction_info.update(delivery_status='delivered')
         
         # Update object
    		self.transaction_info.update(time_delivered=time_delivered)
@@ -60,7 +61,7 @@ class Transaction:
 
         # Update db record's transaction status
         update = {'transaction_status': transaction_status}
-        datebase.update_transaction_record(filter=self.filter, update=update)
+        datebase.update_transaction_record(filter=self.transaction_filter, update=update)
 
         # Update object
         self.transaction_info.update('transaction_seeker': transaction_status)
@@ -74,17 +75,17 @@ class Transaction:
     def _add_delivery_photo(self, delivery_photo):
         # Update db record w delivery_photo
         update = {'delivery_photo': delivery_photo}
-        datebase.update_transaction_record(filter=self.filter, update=update)
+        datebase.update_transaction_record(filter=self.transaction_filter, update=update)
 
         # Update object
-    	  self.transaction_info.update(delivery_photo=delivery_photo)
+    	self.transaction_info.update(delivery_photo=delivery_photo)
     
     def _get_estimated_time(self):
         return transaction_info.get('estimated_time') 
 
     @staticmethod
     def send_text(self, message_type, photo=None):
-        seeker_number = self.transaction_seeker.seeker_info.get('phone')
+        seeker_number = self.transaction_seeker._get_user_phone()
         if message_type in env.text_updates:
             twilio_client.messages.create(to="+1{}".format(seeker_number),
                 from=env.twilio_number,

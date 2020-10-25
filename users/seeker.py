@@ -1,10 +1,11 @@
 from datetime import datetime 
 from Common import datebase as datebase
 from Common import calculations as calculations
+from user import User
 import environment as env
 
 
-class Seeker(user):
+class Seeker(User):
     def __init__(self, action, number_of_ppl, dietary_restrictions=None):
         super.__init__()
         # if action == "request delivery":
@@ -17,7 +18,7 @@ class Seeker(user):
 
     def _update_delivery_address(self, address):
         self.user_info.update(preferred_address=address)
-
+    
     def collect_nearby_centers(self, radius=10):
         nearby_centers = []
 
@@ -53,7 +54,8 @@ class Seeker(user):
             for doc in distribution_centers:
                 
                 # Check distance for rank
-                geocode_data = calculations.geocode_from_address(address=doc.get('address'))
+                address = "{}, {}, FL".format(doc.get('address'), doc.get('city'))
+                geocode_data = calculations.geocode_from_address(address=address)
                 distributor_lat = geocode_data.get('lat')
                 distributor_lon = geocode_data.get('lon')
 
@@ -76,38 +78,11 @@ class Seeker(user):
         # Using input front end data
         doc = {}
 
+        # Update doc with seeker data and order time
         user_data = self.user_info
         doc.update(seeker=user_data.get('name'))
         doc.update(time_placed=datetime.utcnow())
         doc.update(delivery_address=user_data.get('addresses')[0])
-
-                self.transaction_info = {
-            'seeker': seeker,
-            'feeder': feeder,
-            'time_placed': time_placed,
-            'delivery_address': delivery_address,
-            'delivery_instructions': special_delivery_instructions,
-            'is_tracked': is_tracked,
-            'estimated_time': estimated_time
-        }
-
-                self.user_info = {
-            'name': name,
-            'user_type': user_type,
-            'username': email,
-            'password': password,
-            'preferred_address': address, 
-            'addresses': [address],  
-            'phone': phone, 
-            'email': email, # this will work as username and will not be updated
-            'zipcode': zipcode,
-            'profile_photo': profile_photo
-         } 
-        self.user_id = datebase.insert_user_info(self.user_info)
-        self.user_filter = {'email': email} # TODO: someone check this
-        self.user_full_name = name
-        self.user_email = email
-        self.location_type = 'address'
 
         # Find closest distribution centers to add to request record
         closest_distance = 1000
@@ -126,4 +101,9 @@ class Seeker(user):
 
 
     def get_directions_to_distributor(self, distributor):
-        distributor
+        uri_base = 'https://www.google.com/maps/dir/?api=1&destination'
+        address = "{},%20{},%20FL".format(
+            distributor.get('address').replace(' ', '%20'), 
+            distributor.get('city').replace(' ', '%20')
+        )
+        return "{}={}".format(uri_base, address) 
