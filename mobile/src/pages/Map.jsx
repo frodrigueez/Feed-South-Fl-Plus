@@ -14,8 +14,6 @@ const Map = () => {
   };
   const [distCenter, setDistCenter] = useState(sampleDistCenter);
 
-  
-
   const toggleDistCenter = () => {
     if(distCenter){
       setDistCenter(null);
