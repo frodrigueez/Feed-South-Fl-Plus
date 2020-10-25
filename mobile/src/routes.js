@@ -6,6 +6,7 @@ import SeekerMapView from "./pages/SeekerMapPage";
 import SeekerDash from "./pages/SeekerDash";
 import FoodDeliveryRequest from "./pages/FoodDeliveryRequest";
 import FeederDeliveryRouteView from "./pages/FeederDeliveryRouteView";
+import FeederDeliveryRouteViewImg from "./pages/FeederDeliveryRouteViewImg";
 // import FeederDistRouteView from "./pages/FeederDistRouteView";
 import UserType from "./pages/UserType";
 import Home from "./pages/Home";
@@ -33,6 +34,7 @@ const Router = () => {
           component={FoodDeliveryRequest}
         />
         <Route exact path="/seeker/route" component={FeederDeliveryRouteView} />
+        <Route exact path="/seeker/route2" component={FeederDeliveryRouteViewImg} />
         <Route
           exact
           path="/seeker/dist/map"
